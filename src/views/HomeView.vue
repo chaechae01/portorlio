@@ -1,9 +1,40 @@
 <template>
   <div>
-    <swiper :options="swiperOption" class="swiper">
-      <swiper-slide data-aos="fade-in" data-aos-duration="1000" class="slide" style="background-image: url(image/top3.jpg);">
-      <v-layout data-aos="fade-up" data-aos-duration="1000" fill-height align-center justify-center>
-        <div class="slog">명지전문대학 임채연</div>
+    <div class="welcome">
+    <div class="developer">
+    <img src="image/developer.png" alt="개발자" height="150px">
+   </div>
+     <vue-typer class="welcomeText"
+     :text='["Welcome! \nThis is Lim Chaeyeon`s portfolio"]'
+     :repeat='0'
+     initial-action='typing'
+      :pre-type-delay='100'
+      :type-delay='100'
+            
+     >
+      
+     </vue-typer>
+    
+   
+     <!-- <v-layout  style="background-image: url(image/developer.png);"  fill-height align-end justify-end></v-layout> -->
+      
+    </div>
+
+    <div class="top" style="background-image: url(image/chaeyeon.jpg);">
+      <v-layout class="log" data-aos="fade-right" data-aos-delay="100" fill-height align-center justify-end >
+        <v-text>
+          About me!
+          <p class="about">학교: 명지전문대학교
+          </p>
+        </v-text>
+        
+      </v-layout>
+    </div>
+    <!-- <swiper :options="swiperOption" class="swiper">
+      <swiper-slide data-aos="fade-in" data-aos-duration="1000" class="slide"
+       style="background-image: url(image/chaeyeon.jpg);">
+      <v-layout data-aos="fade-up" data-aos-duration="1000" fill-height  align-center justify-center>
+        <div class="slog"> 임채연</div>
       </v-layout></swiper-slide>
       <swiper-slide class="slide" style="background-image: url(image/top2.jpg);">
         <v-layout fill-height align-center justify-center>
@@ -13,14 +44,20 @@
         <v-layout fill-height align-center justify-center>
         <div class="slog">명지전문대학 임채연</div>
       </v-layout></swiper-slide>
-    </swiper>
+      <swiper-slide class="slide" style="background-image: url(image/);">
+        <v-layout fill-height align-center justify-center>
+        <div class="slog">명지전문대학 임채연</div>
+      </v-layout></swiper-slide>
+    </swiper> -->
+
+   
 
     <div class="section">
       <div class="header">프로젝트 목록</div>
       <v-layout wrap>
         <v-flex xs4 class="pa-2" data-aos="fade-right" >
           <v-responsive :aspect-ratio="1/1">
-            <img src="image/top3.jpg" class="image">
+            <img src="@/assets/top4.jpg" class="image">
           </v-responsive>
         </v-flex>
         <v-flex xs4 class="pa-2" data-aos="fade-down" data-aos-delay="100">
@@ -84,8 +121,37 @@ import "aos/dist/aos.css"
 </script>
 <style scoped lang="less">
 
+.welcome{
+  height: 90vh;
+  padding: 15% 0% 0% 10%;
+  .developer{
+    padding-block-end: 30px;
+    
+  }
+  .welcomeText{
+    
+      font-size:90px;
+    }
+}
+  .top{
+    
+    height: 50vh;
+    background-size: cover;
+    background-position: center center;
+    .log{
+      font-size: 80px;
+        font-weight: bold;
+        color: white;
+        padding-right: 100px;
+        .about{
+          font-size: 30px;
+          font-weight: normal;
+        }
+    }
+  }
   .swiper{
-    height: 100vh;
+  
+    height: 50vh;
     .slide{
       background-size: cover;
       background-position: center center;
