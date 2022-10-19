@@ -294,14 +294,16 @@ import "aos/dist/aos.css"
         position: fixed;
         top: 0;
         width: 100%;
+        
        
            
             .logo{
-              
               text-decoration: none;
               color: black;
               font-size: 20px;
               font-weight: bold;
+              
+              
             }
             .text1{
               text-decoration: none;
